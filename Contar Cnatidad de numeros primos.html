@@ -1,0 +1,39 @@
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Suma de Dos dados</title>
+        <link rel="stylesheet" href="">
+    </head>
+    <body>
+        <script language="javascript">
+            t=new Array();
+            N=prompt('Ingrese el tamaño del vector: ','');
+            cantidadPrimos=0;
+            for(k=1;k<=N;k++) t[k]=0;
+
+            for(k=1;k<=N;k++) {
+                //t[k]=k; //ordenado
+                t[k]=prompt('ingrese un numero','');
+                c=0;
+                for(i=1;i<=t[k];i++){
+                    if(t[k]%i==0){
+                        c++;
+                    }
+                }
+                if(c<=2){
+                    cantidadPrimos++;
+                    document.writeln(t[k]+"  es primo<br>");
+                }
+
+                else{
+                    document.writeln( t[k]+" no es primo <br>");
+                }
+            }
+            
+
+                document.writeln("<h3> Existen "+cantidadPrimos+" numeros primos</h3><br>");
+            
+        </script>
+    </body>
+</html>
